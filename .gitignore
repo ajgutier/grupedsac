@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Gulp output
+assets/css/*
+!assets/css/.gitkeep
+assets/js/*
+!assets/js/.gitkeep
+assets/img/*
+!assets/img/.gitkeep
+
+# SASS cache
+.sass-cache/
+*.css.map
+
+# Mac
+.DS_Store
+
+# WordPress core (fuera del tema, pero útil si subes todo el proyecto)
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/

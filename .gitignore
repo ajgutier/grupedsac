@@ -23,3 +23,53 @@ assets/img/*
 wp-config.php
 wp-content/uploads/
 wp-content/upgrade/
+
+# ─── GULP & NODE ────────────────────────────
+node_modules/
+dist/
+*.log
+*.tmp
+*.map
+package-lock.json
+
+# ─── SISTEMA OPERATIVO ──────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── IDEs y editores ────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ─── WORDPRESS CORE ─────────────────────────
+/wp-admin/
+/wp-includes/
+license.txt
+readme.html
+
+# ─── WORDPRESS CACHES ───────────────────────
+*.sql
+*.sql.gz
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/upgrade/
+/wp-content/uploads/backwpup-*/ 
+/.htaccess
+
+# ─── ARCHIVOS SENSIBLES ─────────────────────
+.env
+.env.*
+*.bak
+*.old
+
+# ─── CARPETAS DE SUBIDA / CONTENIDO ────────
+/wp-content/uploads/
+
+# ─── COMPOSER / PHP ─────────────────────────
+vendor/
+composer.lock
+
+# ─── ARCHIVOS PERSONALIZADOS ────────────────
+/src/img-originales/
+/src/scss/config/_tokens.scss

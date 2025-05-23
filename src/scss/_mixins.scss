@@ -1,0 +1,50 @@
+// _mixins.scss
+@use "sass:map";
+@use "variables" as vars;
+
+/// Mixin base para botones
+@mixin boton-base {
+  display: inline-block;
+  padding: vars.$btn-padding-movil;
+  font-family: vars.$font-base-family;
+  font-size: vars.$btn-font-size;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: vars.$btn-border-radius;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+/// Mixin para ajustar padding en tablet y desktop
+@mixin boton-tablet {
+  padding: vars.$btn-padding-tablet;
+}
+
+/// Desde teléfonos grandes (>= 480px)
+@mixin celular-grande {
+  @media (min-width: map.get(vars.$breakpoints, "celular-grande")) {
+    @content;
+  }
+}
+
+/// Desde tablets (>= 768px)
+@mixin tablet {
+  @media (min-width: map.get(vars.$breakpoints, "tablet")) {
+    @content;
+  }
+}
+
+/// Desde laptops/desktop (>= 1024px)
+@mixin escritorio {
+  @media (min-width: map.get(vars.$breakpoints, "escritorio")) {
+    @content;
+  }
+}
+
+/// Desde pantallas anchas (>= 1440px)
+@mixin pantalla-ancha {
+  @media (min-width: map.get(vars.$breakpoints, "pantalla-ancha")) {
+    @content;
+  }
+}

@@ -1,6 +1,8 @@
-// Reset moderno y base
+// _base.scss
+@use "variables" as vars;
+
 html {
-  font-size: 100%; // 16px
+  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -10,11 +12,28 @@ html {
   box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: $font-primary;
-  color: $color-text;
-  background-color: $color-bg;
-  line-height: 1.6;
+  font-family: vars.$font-base-family;
+  font-size: vars.$font-base-size;
+  line-height: vars.$line-height-base;
+  color: vars.$color-texto;
+  background-color: vars.$color-fondo;
   -webkit-font-smoothing: antialiased;
 }
 

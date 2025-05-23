@@ -1,12 +1,29 @@
-// Tipografía
-$font-primary: "Inter", sans-serif;
+// _variables.scss
+
+// Breakpoints
+$breakpoints: (
+  "celular-grande": 480px,
+  "tablet": 768px,
+  "escritorio": 1024px,
+  "pantalla-ancha": 1440px,
+);
 
 // Colores
-$color-text: #222;
-$color-bg: #fff;
-$color-primary: #0073e6;
-$color-secondary: #555;
+$color-primario: #2e7e3e;
+$color-secundario: #7bbf4d;
+$color-acento: #f1c232;
+$color-fondo: #f5f5f0;
+$color-texto: #333333;
+$color-blanco: #ffffff;
 
-// Dimensiones
-$container-width: 1200px;
-$gutter: 2rem;
+// Botones
+$btn-padding-movil: 0.75rem 1.5rem;
+$btn-padding-tablet: 1rem 2rem;
+$btn-font-size: 1rem;
+$btn-font-size-lg: 1.125rem;
+$btn-border-radius: 0.25rem;
+
+// Tipografía
+$font-base-family: "Helvetica Neue", Arial, sans-serif;
+$font-base-size: 1rem;
+$line-height-base: 1.6;

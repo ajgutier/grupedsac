@@ -1,27 +1,32 @@
 {
-  "name": "grupecsad",
+  "name": "grupedsac-theme",
   "version": "1.0.0",
-  "description": "Tema WordPress personalizado para Grupecsad",
+  "description": "Tema WordPress personalizado para GRUPEDSAC con flujo Gulp.",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "watch": "gulp watch"
   },
-  "author": "Argenis Gutiérrez",
-  "license": "GPL-2.0",
+  "author": "Argenis J. Gutiérrez",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.9",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^2.0.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^5.0.1",
-    "sass": "^1.74.0"
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.75.0"
   }
 }

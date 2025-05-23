@@ -1,0 +1,44 @@
+// _layout.scss
+@use "sass:color";
+@use "variables" as vars;
+@use "mixins" as mix;
+
+/// Contenedor principal
+.contenedor {
+  width: 100%;
+  padding: 0 1rem;
+
+  @include mix.tablet {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include mix.escritorio {
+    max-width: 960px;
+  }
+
+  @include mix.pantalla-ancha {
+    max-width: 1140px;
+  }
+}
+
+/// Encabezado del sitio
+.encabezado-sitio {
+  background-color: vars.$color-primario;
+  color: vars.$color-blanco;
+  padding: 1rem 0;
+
+  @include mix.tablet {
+    padding: 2rem 0;
+  }
+}
+
+/// Pie de página
+.pie-sitio {
+  background-color: color.adjust(vars.$color-fondo, $lightness: -5%);
+  color: vars.$color-texto;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  text-align: center;
+}

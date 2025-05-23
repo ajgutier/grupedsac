@@ -4,7 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
@@ -90,8 +90,8 @@ function webpImages() {
 // Tarea Watch
 function watchFiles() {
   browserSync.init({
-    proxy: "http://localhost/grupecsad", // Cambia esta URL a la de tu entorno local
-    notify: true
+     proxy: "http://grupedsac.local", // ✅ usa tu URL real
+  notify: true
   });
 
   gulp.watch('src/scss/**/*.scss', styles);

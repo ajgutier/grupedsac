@@ -1,0 +1,72 @@
+// _components.scss
+@use "sass:color";
+@use "variables" as vars;
+@use "mixins" as mix;
+
+/// Botón primario
+.btn {
+  @include mix.boton-base;
+  background: vars.$color-primario;
+  color: vars.$color-blanco;
+
+  &:hover,
+  &:focus {
+    background: color.adjust(vars.$color-primario, $lightness: -10%);
+  }
+
+  @include mix.tablet {
+    @include mix.boton-tablet;
+    font-size: vars.$btn-font-size-lg;
+  }
+}
+
+/// Botón secundario
+.btn--secundario {
+  @include mix.boton-base;
+  background: vars.$color-secundario;
+  color: vars.$color-blanco;
+
+  @include mix.tablet {
+    @include mix.boton-tablet;
+  }
+
+  &:hover,
+  &:focus {
+    background: color.adjust(vars.$color-secundario, $lightness: -10%);
+  }
+}
+
+/// Botón outline
+.btn--outline {
+  @include mix.boton-base;
+  background: transparent;
+  border: 2px solid vars.$color-primario;
+  color: vars.$color-primario;
+
+  @include mix.tablet {
+    @include mix.boton-tablet;
+  }
+
+  &:hover,
+  &:focus {
+    background: vars.$color-primario;
+    color: vars.$color-blanco;
+  }
+}
+
+/// Botón full-width (mobile)
+.btn--bloque {
+  display: block;
+  width: 100%;
+}
+
+/// Tamaños extra
+.btn--pequeno {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn--grande {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.25rem;
+}

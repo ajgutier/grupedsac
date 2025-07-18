@@ -3,7 +3,8 @@
  * functions.php
  * Funciones y soportes del tema Grupecsad mejorado para seguridad, SEO y rendimiento
  */
-
+// Carga el archivo que registra los campos ACF para el Hero
+require get_template_directory() . '/inc/acf-hero.php';
 // 1. Soportes Básicos
 add_theme_support( 'title-tag' );                           // Título dinámico
 add_theme_support( 'post-thumbnails' );                     // Imágenes destacadas

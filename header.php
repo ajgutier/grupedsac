@@ -11,16 +11,14 @@
 
     <header class="encabezado-sitio">
         <div class="contenedor">
-            <?php if ( function_exists('the_custom_logo') && has_custom_logo() ) : ?>
+            <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
             <?php the_custom_logo(); ?>
             <?php else : ?>
-            <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo-sitio">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.webp"
-                    alt="<?php bloginfo('name'); ?>">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-sitio">
+                <?php bloginfo( 'name' ); ?>
             </a>
             <?php endif; ?>
         </div>
 
-        <!-- Menú principal -->
         <?php get_template_part( 'template-parts/navigation' ); ?>
     </header>

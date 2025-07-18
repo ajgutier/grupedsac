@@ -1,11 +1,12 @@
 <?php
 /**
  * inc/acf-hero.php
- * Registra los campos ACF para el Hero dinámico
+ * Registra los campos ACF para el Hero dinámico en el tema Grupecsad.
  */
 
 add_action( 'acf/init', 'grupecsad_register_hero_fields' );
 function grupecsad_register_hero_fields() {
+    // Asegurarse de que ACF está activo
     if ( ! function_exists( 'acf_add_local_field_group' ) ) {
         return;
     }
@@ -23,9 +24,10 @@ function grupecsad_register_hero_fields() {
                     'home'     => 'Home (secciones)',
                     'history'  => 'Historia (timeline)',
                     'programs' => 'Programas (grid)',
-                    'default'  => 'Default (título+texto)',
+                    'default'  => 'Default (título + texto)',
                 ),
                 'default_value' => 'default',
+                'required'      => 1,
             ),
             array(
                 'key'      => 'field_hero_title',
@@ -39,18 +41,21 @@ function grupecsad_register_hero_fields() {
                 'label'    => 'Hero Subtitle',
                 'name'     => 'hero_subtitle',
                 'type'     => 'textarea',
+                'required' => 0,
             ),
             array(
                 'key'      => 'field_hero_button_text',
                 'label'    => 'Button Text',
                 'name'     => 'hero_button_text',
                 'type'     => 'text',
+                'required' => 0,
             ),
             array(
                 'key'      => 'field_hero_button_url',
                 'label'    => 'Button URL',
                 'name'     => 'hero_button_url',
                 'type'     => 'url',
+                'required' => 0,
             ),
             array(
                 'key'           => 'field_hero_bg_image',
@@ -58,6 +63,7 @@ function grupecsad_register_hero_fields() {
                 'name'          => 'hero_bg_image',
                 'type'          => 'image',
                 'return_format' => 'array',
+                'required'      => 0,
             ),
             array(
                 'key'           => 'field_hero_bg_video',
@@ -66,6 +72,7 @@ function grupecsad_register_hero_fields() {
                 'type'          => 'file',
                 'return_format' => 'array',
                 'mime_types'    => 'mp4,webm',
+                'required'      => 0,
             ),
             array(
                 'key'           => 'field_hero_has_bg_video',
@@ -97,4 +104,3 @@ function grupecsad_register_hero_fields() {
         'menu_order' => 0,
     ) );
 }
-error_log( 'ACF HERO FIELDS REGISTERED' );
